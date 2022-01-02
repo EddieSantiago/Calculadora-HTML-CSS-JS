@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    
+    <div class="informacion">
+        <h1>Calculadora con HTML CSS y JS</h1>
+        <p>Proyecto Creado y Programado por Eddie Santiago Delgado</p>
+    </div>
+
+    <div class="container">
+        <div class="calculadora">
+            <div class="calculadora-top">
+                <!-- Usamos un input de tipo number pero filtramos los datos que se pueden incluir con el evento onkeypress, que permite que se escriba ciertos valores de caracteres ACSI en este caso del 42 a 57 (caracteres y numeros) -->
+                <input type="text" class="input" id="display" onkeypress="return (event.charCode >= 42 && event.charCode <= 57)">
+            </div>
+            <div class="calculadora-bottom">
+                <div class="buttons">
+                    <div class="button" id="7" onclick="agregarNumero(7)">7</div>
+                    <div class="button" id="8" onclick="agregarNumero(8)">8</div>
+                    <div class="button" id="9" onclick="agregarNumero(9)">9</div>
+                    <div class="button function" id="del">DEL</div>
+                    <div class="button function" id="ac">AC</div>
+                    <div class="button" id="4" onclick="agregarNumero(4)">4</div>
+                    <div class="button" id="5" onclick="agregarNumero(5)">5</div>
+                    <div class="button" id="6" onclick="agregarNumero(6)">6</div>
+                    <div class="button function" id="x">x</div>
+                    <div class="button function" id="/">/</div>
+                    <div class="button" id="1" onclick="agregarNumero(1)">1</div>
+                    <div class="button" id="2" onclick="agregarNumero(2)">2</div>
+                    <div class="button" id="3" onclick="agregarNumero(3)">3</div>
+                    <div class="button function" id="+">+</div>
+                    <div class="button function" id="-">-</div>
+                    <div class="button large" id="0" onclick="agregarNumero(0)">0</div>
+                    <div class="button" id="." onclick="agregarPunto()">.</div>
+                    <div class="button function" id="^">^</div>
+                    <div class="button function" id="=" onclick="resultado()">=</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
